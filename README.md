@@ -1,2 +1,0 @@
-# quizPlease
-quiz

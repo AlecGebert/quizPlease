@@ -4,6 +4,7 @@ window.onload = function () {
       answerArea   = document.getElementsByClassName('answers')[0],
       checker      = document.getElementsByClassName('checker')[0],
       current      = 0,
+      //count        = 0,
 
      imagesArea = document.getElementsByClassName('images')[0],
 
@@ -38,7 +39,7 @@ window.onload = function () {
       
   function loadQuestion(curr) {
   // Эта функция загружает все вопросы в questionArea
-  // Она захватывает текущий (current) вопрос на основе "текущей" ('current').
+  // Она захватывает текущий (current) вопрос на основе "текущей" ('current') переменной.
   
     var question = Object.keys(allQuestions)[curr];
     
@@ -58,7 +59,7 @@ window.onload = function () {
   
   function loadAnswers(curr) {
   // Эта функция загружает все возможне ответы на данный вопрос.
-  // Она захватывает необходимый массив ответов с помощью текущей (curr) переменнойю.
+  // Она захватывает необходимый массив ответов с помощью текущей (curr) переменной.
   // Каждый ответ добавляется с помощью функции "onclick".
   
     var answers = allQuestions[Object.keys(allQuestions)[curr]];
@@ -100,6 +101,7 @@ window.onload = function () {
         loadQuestion(current);
         loadAnswers(current);
         loadImages(current);
+
       } else {
         questionArea.innerHTML = 'Конец викторины';
         answerArea.innerHTML = 'Ваш результат: ';
@@ -124,6 +126,7 @@ window.onload = function () {
       
       createDivR.className += 'correct';
       checker.appendChild(createDivR);
+
     } else {
       createDivW.className += 'false';
       checker.appendChild(createDivW);

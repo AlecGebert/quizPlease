@@ -102,7 +102,7 @@ window.onload = function () {
         loadImages(current);
       } else {
         questionArea.innerHTML = 'Конец викторины';
-        answerArea.innerHTML = '';
+        answerArea.innerHTML = 'Ваш результат: ';
       }
                               
     };
